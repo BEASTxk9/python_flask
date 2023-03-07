@@ -2,9 +2,13 @@
 
 # Import module
 from flask import Flask
+from views import views
 
 # initialize application of the app
 app = Flask(__name__)
+
+# call routes
+app.register_blueprint(views, url_prefix="/")
 
 
 # (DOING THIS WORKS HOWEVER IT MAKES THIS FILE LOOK CLUTTERED THEREFORE ALL ROUTES ARE PLACED INTO THE VIEW.PY FILE )
