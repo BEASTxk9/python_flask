@@ -1,0 +1,9 @@
+<!-- purpose of jinja is to use less code and duplicate a consistent theme throughout the website -- >
+
+<!-- import the file where the content will be placed -->
+{% extends "index.html" %}
+
+<!-- This will overwrite the content on the index.html file -->
+{% block content %}
+<h1>This is the Profile Page</h1>
+{% endblock %}

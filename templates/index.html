@@ -6,15 +6,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+   <!-- personal css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <title>PYTHON THEME</title>
 </head>
 <body>
     
-<div>
-    <h1>Home page</h1>
-    <!-- you can find name in views.py -->
-    <p>Hello, {{name}}, you are {{age}}</p>
-</div>
+<header>
+    <nav class="nav_bar">
+        <a href="/">Home</a>
+        <a href="/user_profile">User Profile</a>
+        <a href="/profile">Profile</a>
+    </nav>
+</header>
+
+    <main>
+        <div>
+            <!-- the content outside the block will be displayed on all pages -->
+            <!-- creating a block for jinja -->
+            <!-- the content in the block can be overwritten -->
+            {%block content %}
+            
+                <h1>Home page</h1>
+                <!-- you can find name in views.py -->
+                <p>Hello, {{name}}!</p>
+            
+            {% endblock %}    
+            </div>
+    </main>
+
+    <footer>
+        <p>Made by Shane Stevens | 2023</p>
+    </footer>
+
+
+
+<!-- link js -->
+
+<script type="text/javascript" src="{{url_for('static', filename='/js/index.js')}}"></script>
+
+
 
 </body>
 </html>
